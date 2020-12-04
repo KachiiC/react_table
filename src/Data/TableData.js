@@ -93,7 +93,7 @@ const TableData = [
     {
         "chinese_characters": "的",
         "pinyin": "de",
-        "definition": "a subordinating particle that can be used to indicate possession",
+        "definition": "subordinating particle indicating possession",
         "type": "auxiliary",
         "hsk_level": 1
     },

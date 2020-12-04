@@ -5,7 +5,13 @@ const SiteTable = (props) => {
     const inputData = props.data
     const columns = props.columns
 
-    const displayColumns = columns.map((column, index) => <td key={index}>{column}</td>)
+    const displayColumns = columns.map((column, index) => {
+        const columnTitle = column.split("_").join(" ")
+
+        return (
+            <th key={index}>{columnTitle}</th>
+        )
+    })
 
     const displayData = inputData.map((data, index) => {
         const singleColumn = columns.map((column, index) => (
@@ -20,12 +26,12 @@ const SiteTable = (props) => {
     })
 
     return (
-        <div>
+        <table>
             <tr>
                 {displayColumns}
             </tr>
             {displayData}
-        </div>
+        </table>
         
     )
 }
